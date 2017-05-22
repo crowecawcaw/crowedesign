@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title></title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <style>
+    {% capture grid_css %}{% include simple-grid.scss %}{% endcapture %}
+    {{ grid_css | scssify }}
+    {% capture main_css %}{% include main.scss %}{% endcapture %}
+    {{ main_css | scssify }}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav>
+      <span class="logo hidden-sm">{% include cd.svg %}</span>
+      <span class="links">
+        <a href="/">About</a>
+        <a href="/portfolio">Portfolio</a>
+        <a href="/contact">Contact</a>
+      </span>
+    </nav>
+    <h1>{{page.header_text}}</h1>
+  </header>
+  <main>
+    {{page.content}}
+  </main>
+  <footer>
+    <span class="links">
+      <a href="/">About</a>
+      <a href="/portfolio">Portfolio</a>
+      <a href="/contact">Contact</a>
+    </span>
+    <span class="copyright">&copy; 2017 Stephen Crowe</span>
+  </footer>
+</body>
+</html>

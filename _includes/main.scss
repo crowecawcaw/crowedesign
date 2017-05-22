@@ -1,0 +1,224 @@
+$primary1: rgb(72,73,147);
+$primary2: rgb(51,108,165);
+$primary3: rgb(80,168,183);
+$primary: $primary2;
+$accent-light: #ccc;
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6a;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+///////////////////////////////////////////
+// Header
+///////////////////////////////////////////
+
+.header {
+  width: 100%;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, .4);
+  background-color: rgb(72,73,147);
+  background: rgb(72,73,147);
+  background: -moz-linear-gradient(45deg, $primary1 0%, $primary2 51%, $primary3 99%);
+  background: -webkit-linear-gradient(45deg, $primary1 0%,$primary2 51%,$primary3 99%);
+  background: linear-gradient(45deg, $primary1 0%,$primary2 51%,$primary3 99%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#484993', endColorstr='#50a8b7',GradientType=1 );
+}
+nav {
+  padding: 2em 3em;
+}
+nav .links a {
+  margin: 0 0 0 1em;
+}
+nav a, nav a:active, nav a:visited, nav a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+nav > .links {
+  float: right;
+}
+
+nav .links a {
+  position: relative;
+}
+nav .links a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #fff;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.15s ease-in-out 0s;
+  transition: all 0.15s ease-in-out 0s;
+}
+nav .links a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.header h1 {
+  font-size: 2em;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 2em;
+  padding-top: 2em;
+  padding-bottom: 4em;
+}
+
+.logo {
+  display: inline;
+}
+
+///////////////////////////////////////////
+// Content
+///////////////////////////////////////////
+
+main, footer {
+  width: 100%;
+  max-width: 70em;
+  padding: 2em;
+  margin: auto;
+}
+
+h2, .portfolio-section-title, .portfolio-section-title a {
+  font-size: 1.1em;
+  color: rgb(244, 101, 66);
+  margin: 0 0 .3em 0;
+  text-decoration: none;
+}
+.portfolio-section-title a {
+  border-bottom-color: rgba(244,101,66,0);
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  transition: border-bottom-color .2s;
+}
+.portfolio-section-title a:hover {
+  border-bottom-color: rgba(244, 101, 66,1);
+}
+
+.tag {
+  display: inline-block;
+  font-size: .8em;
+  padding: .3em .5em;
+  background: #ddd;
+  border-radius: .2em;
+}
+
+img {
+  width: 100%;
+}
+
+.device-frame {
+  background-color: #161f2d;
+  border-radius: 2%;
+  width: 100%;
+  padding-bottom: 75%;
+  position: relative;
+  transition: box-shadow .2s;
+}
+.device-frame-clip {
+  overflow: hidden;
+}
+.device-frame:hover {
+  box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, .3);
+}
+.device-frame > * {
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  margin: 5% 4%;
+  width: 92%;
+}
+
+.header-icon {
+  font-size: 5em;
+  color: #9dabbd;
+  display: block;
+  text-align: center;
+}
+.center {
+  text-align: center;
+}
+
+.pad-bottom {
+  padding-bottom: 3em;
+}
+
+label {
+  font-size: .75em;
+  color: #999;
+  display: block;
+  margin-bottom: .4em;
+}
+input {
+  border-top: 0; border-left: 0; border-right: 0;
+  border-bottom: 2px solid $accent-light;
+  transition: border-color .2s;
+  width: 100%;
+}
+input:focus, textarea:focus {
+  transition: border-color .2s;
+  outline: none;
+  border-color: $primary;
+}
+textarea {
+  border: 2px solid $accent-light;
+  border-radius: 4px;
+  resize: none;
+  transition: border-color .2s;
+  width: 100%;
+  height: 13em;
+  padding: .4em;
+}
+input, textarea {
+  font-size: 1em;
+  margin-bottom: 2em;
+}
+input[type=submit] {
+  border: none;
+  border-radius: 4px;
+  padding: .75em;
+  background-color: $primary;
+  color: #fff;
+  font-size: .8em;
+  cursor: pointer;
+  transition: background-color .2s;
+}
+input[type=submit]:hover {
+  background-color: darken($primary, 10%);
+}
+
+///////////////////////////////////////////
+// Footer
+///////////////////////////////////////////
+footer {
+  border-top: 1px solid #f0f0f0;
+  text-align: center;
+  color: #aaa;
+  font-size: .9em;
+}
+footer .links {
+}
+footer .copyright {
+  padding-left: 2em;
+}
+footer .links a {
+  color: #aaa;
+  padding-right: 1em;
+  text-decoration: none;
+  transition: color .1s;
+}
+footer .links a:hover {
+  color: #888;
+}

@@ -32,7 +32,12 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#484993', endColorstr='#50a8b7',GradientType=1 );
 }
 nav {
-  padding: 2em 3em;
+  padding: 1.5em 1.5em;
+}
+@media only screen and (min-width: 400px) {
+  nav {
+    padding: 2em 3em;    
+  }
 }
 nav .links a {
   margin: 0 0 0 1em;
@@ -43,6 +48,7 @@ nav a, nav a:active, nav a:visited, nav a:focus {
 }
 nav > .links {
   float: right;
+  padding-top: .4em;
 }
 
 nav .links a {

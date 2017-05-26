@@ -49,6 +49,7 @@ nav a, nav a:active, nav a:visited, nav a:focus {
 nav > .links {
   float: right;
   padding-top: .4em;
+  white-space: nowrap;
 }
 
 nav .links a {
@@ -134,17 +135,31 @@ img {
   position: relative;
   transition: box-shadow .2s;
 }
-.device-frame-clip {
+.phone-frame {
+  background-color: #161f2d;
+  border-radius: 30px;
+  width: 100%;
+  padding-bottom: 178%;
+  position: relative;
+  transition: box-shadow .2s;
+}
+.device-frame-clip, .phone-frame-clip {
   overflow: hidden;
 }
-.device-frame:hover {
-  box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, .3);
+.device-frame:hover, .phone-frame:hover {
+  box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, .4);
 }
 .device-frame > * {
   position: absolute;
   top: 0; bottom: 0; left: 0; right: 0;
   margin: 5% 4%;
   width: 92%;
+}
+.phone-frame > * {
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  margin: 15% 6%;
+  width: 88%;
 }
 
 .header-icon {
